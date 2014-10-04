@@ -1,0 +1,37 @@
+<h1>Task Expiration of Loyalty Points</h1>
+<p>Luxola offers loyalty points to incentivize customers for different actions. Some examples of actions and points are:
+<ul>
+<li>    A point is awarded for every dollar spent</li>
+<li>    25 points are awarded for signing up to loyalty program</li>
+<li>    10 points are awarded for writing a review</li>
+</ul>
+</p>
+<p>
+ The task is to write a Ruby class that would query for points,
+ that should expire on a given date and make a corrosponding negative entry in the point_line_items table. If it were to be invoked with 13/03/2014 as the date, a new entry like below need to be made
+ </p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th align="right">User ID</th>
+<th align="right">Points</th>
+<th align="right">Source</th>
+<th align="right">created_at</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td align="right">1</td>
+<td align="right">-265</td>
+<td align="right">Points #5 expired</td>
+<td align="right">13/03/2014</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<a href="/users">Users</a>
+<a href="/point_line_items">PointsTable</a>
+<hr>
+<h2>Solution path: app\helpers\point_line_items_helper.rb</h2>
